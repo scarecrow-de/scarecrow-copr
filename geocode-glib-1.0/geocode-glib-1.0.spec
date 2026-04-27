@@ -19,8 +19,6 @@ BuildRequires:  pkgconfig(libsoup-2.4)
 
 Requires:       json-glib%{?_isa} >= %{json_glib_version}
 
-Provides:	pkgconfig(geocode-glib-1.0) = %{version}
-
 %description
 geocode-glib is a convenience library for the geocoding (finding longitude,
 and latitude from an address) and reverse geocoding (finding an address from
@@ -32,7 +30,7 @@ load.
 %package        devel
 Summary:        Development files for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
-
+Provides:	pkgconfig(geocode-glib-1.0) = %{version}
 %description    devel
 The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
