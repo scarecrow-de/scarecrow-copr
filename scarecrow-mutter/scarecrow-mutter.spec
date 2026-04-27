@@ -59,10 +59,10 @@ BuildRequires: xkeyboard-config-devel
 BuildRequires: zenity
 BuildRequires: desktop-file-utils
 # Bootstrap requirements
-BuildRequires: gtk-doc gnome-common gettext-devel git
+BuildRequires: gtk-doc scarecrow-common gettext-devel git
 BuildRequires: libcanberra-devel
-BuildRequires: gsettings-desktop-schemas-devel >= %{gsettings_desktop_schemas_version}
-BuildRequires: gnome-settings-daemon-devel
+BuildRequires: scarecrow-gsettings-desktop-schemas-devel >= %{gsettings_desktop_schemas_version}
+BuildRequires: scarecrow-gnome-settings-daemon-devel
 BuildRequires: meson
 BuildRequires: pkgconfig(gudev-1.0)
 BuildRequires: pkgconfig(libdrm)
@@ -164,6 +164,9 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
 %{_datadir}/mutter-%{mutter_api_version}/tests
 
 %changelog
+* Mon Apr 27 2026 Marcel Mrówka <micro.mail88@gmail.com> - 3.18.1-1
+- Initial scarecrow-mutter release
+
 * Mon Oct 05 2020 Florian Müllner <fmuellner@redhat.com> - 3.38.1-1
 - Update to 3.38.1
 
