@@ -18,6 +18,7 @@ Source0:        https://github.com/scarecrow-de/%{name}/archive/refs/tags/%{vers
 Source1:        org.gnome.settings-daemon.plugins.power.gschema.override
 
 BuildRequires:  meson >= 0.44.0
+BuildRequires:  cmake
 BuildRequires:  gcc
 BuildRequires:  cups-devel
 BuildRequires:  gettext
