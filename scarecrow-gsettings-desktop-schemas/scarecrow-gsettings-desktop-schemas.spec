@@ -47,7 +47,7 @@ and header files for developing applications that use %{name}.
 %install
 %meson_install
 
-%find_lang %{name} --with-gnome
+%find_lang gsettings-desktop-schemas --with-gnome
 
 
 %check
@@ -55,7 +55,7 @@ and header files for developing applications that use %{name}.
 glib-compile-schemas --dry-run --strict %{buildroot}%{_datadir}/glib-2.0/schemas
 
 
-%files -f %{name}.lang
+%files -f gsettings-desktop-schemas.lang
 %doc AUTHORS MAINTAINERS NEWS README
 %license COPYING
 %{_datadir}/glib-2.0/schemas/*

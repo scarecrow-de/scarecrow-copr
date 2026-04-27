@@ -17,6 +17,7 @@ Requires:       gettext
 Requires:       libtool
 Requires:       pkgconfig
 Requires:       yelp-tools
+BuildRequire:	make
 
 %description
 This package contains sample files that should be used to develop pretty much
