@@ -3,7 +3,7 @@
 
 Name:           scarecrow-adwaita-icon-theme
 Version:        3.38.0.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Adwaita-Scarecrow icon theme
 
 License:        LGPLv3+ or CC-BY-SA

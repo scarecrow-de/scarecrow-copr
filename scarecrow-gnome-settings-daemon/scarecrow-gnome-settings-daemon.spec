@@ -9,7 +9,7 @@
 
 Name:           scarecrow-gnome-settings-daemon
 Version:        3.32.2.5
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        The daemon sharing settings from SCARECROW to GTK+/KDE applications
 
 License:        GPLv2+

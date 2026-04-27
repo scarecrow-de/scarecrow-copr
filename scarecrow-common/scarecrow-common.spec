@@ -1,6 +1,6 @@
 Name:           scarecrow-common
 Version:        3.18.0
-Release:        10%{?dist}
+Release:        11%{?dist}
 Summary:        Useful things common to building SCARECROW packages from scratch
 BuildArch:      noarch
 License:        GPLv2+

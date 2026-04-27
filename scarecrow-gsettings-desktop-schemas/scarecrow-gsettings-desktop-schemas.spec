@@ -2,7 +2,7 @@
 
 Name:           scarecrow-gsettings-desktop-schemas
 Version:        3.38.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A collection of GSettings schemas
 
 License:        LGPLv2+
