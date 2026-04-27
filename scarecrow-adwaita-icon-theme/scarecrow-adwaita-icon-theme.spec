@@ -12,6 +12,7 @@ Source0:        https://github.com/scarecrow-de/scarecrow-adwaita-icon-theme/arc
 
 BuildArch:      noarch
 
+BuildRequires:  make
 BuildRequires:  intltool
 BuildRequires:  librsvg2
 %if ! 0%{bootstrap}
