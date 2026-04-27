@@ -20,6 +20,7 @@ Requires:       yelp-tools
 BuildRequires:	make
 
 Provides:	gnome-common = %{version}
+Provides:	pkgconfig(gnome-common) = %{version}
 
 %description
 This package contains sample files that should be used to develop pretty much

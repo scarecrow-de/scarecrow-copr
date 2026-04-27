@@ -84,6 +84,7 @@ Summary:        Development files for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 Provides:	gnome-settings-daemon-devel = %{version}
+Provides:	pkgconfig(gnome-settings-daemon) = %{version}
 
 %description    devel
 The %{name}-devel package contains libraries and header files for

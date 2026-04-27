@@ -33,6 +33,7 @@ Summary:        Development files for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 Provides:	gsettings-desktop-schemas-devel = %{version}
+Provides:	pkgconfig(gsettings-desktop-schemas) = %{version}
 
 %description    devel
 The %{name}-devel package contains libraries

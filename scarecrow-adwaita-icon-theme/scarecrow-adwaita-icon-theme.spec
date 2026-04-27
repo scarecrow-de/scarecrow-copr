@@ -40,6 +40,7 @@ Summary:        Development files for %{name}
 Requires:       %{name} = %{version}-%{release}
 
 Provides:	adwaita-icon-theme-devel = %{version}
+Provides:	pkgconfig(adwaita-icon-theme) = %{version}
 
 %description    devel
 The %{name}-devel package contains the pkgconfig file for
