@@ -7,7 +7,7 @@ Summary:        Geocoding helper library
 
 License:        LGPLv2+
 URL:            http://www.gnome.org/
-Source0:        http://download.gnome.org/sources/%{name}/3.26/%{name}-%{version}.tar.xz
+Source0:        http://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-%{version}.tar.xz
 
 BuildRequires:  gettext
 BuildRequires:  gtk-doc
@@ -39,7 +39,7 @@ developing applications that use %{name}.
 
 
 %prep
-%setup -q
+%setup -q -n geocode-glib-%{version}
 
 
 %build
