@@ -73,6 +73,8 @@ Obsoletes: gnome-settings-daemon-devel < 3.23.1
 # dropped in 3.33.90 (and functionality moved over to mutter).
 Conflicts: gnome-session < 3.33.90
 
+Provides:	gnome-settings-daemon = %{version}
+
 %description
 A daemon to share settings from GNOME to other applications. It also
 handles global keybindings, as well as a number of desktop-wide settings.
@@ -80,6 +82,8 @@ handles global keybindings, as well as a number of desktop-wide settings.
 %package        devel
 Summary:        Development files for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
+
+Provides:	gnome-settings-daemon-devel = %{version}
 
 %description    devel
 The %{name}-devel package contains libraries and header files for

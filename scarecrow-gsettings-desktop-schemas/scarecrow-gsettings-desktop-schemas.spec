@@ -21,6 +21,8 @@ Requires: glib2 >= 2.31.0
 Recommends: font(cantarell)
 Recommends: font(sourcecodepro)
 
+Provides:	gsettings-desktop-schemas = %{version}
+
 %description
 scarecrow-gsettings-desktop-schemas contains a collection of GSettings schemas for
 settings shared by various components of a desktop.
@@ -29,6 +31,8 @@ settings shared by various components of a desktop.
 %package        devel
 Summary:        Development files for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
+
+Provides:	gsettings-desktop-schemas-devel = %{version}
 
 %description    devel
 The %{name}-devel package contains libraries

@@ -21,11 +21,15 @@ BuildRequires:  /usr/bin/gtk-encode-symbolic-svg
 
 Requires:       scarecrow-adwaita-cursor-theme = %{version}-%{release}
 
+Provides:	adwaita-icon-theme = %{version}
+
 %description
 This package contains the Adwaita-Scarecrow icon theme used by the SCARECROW desktop.
 
 %package -n     scarecrow-adwaita-cursor-theme
 Summary:        Adwaita-Scarecrow cursor theme
+
+Provides:	adwaita-cursor-theme = %{version}
 
 %description -n scarecrow-adwaita-cursor-theme
 The scarecrow-adwaita-cursor-theme package contains a modern set of cursors originally
@@ -34,6 +38,8 @@ designed for the GNOME 3 desktop.
 %package        devel
 Summary:        Development files for %{name}
 Requires:       %{name} = %{version}-%{release}
+
+Provides:	adwaita-icon-theme-devel = %{version}
 
 %description    devel
 The %{name}-devel package contains the pkgconfig file for

@@ -19,6 +19,8 @@ Requires:       pkgconfig
 Requires:       yelp-tools
 BuildRequires:	make
 
+Provides:	gnome-common = %{version}
+
 %description
 This package contains sample files that should be used to develop pretty much
 every GNOME application.  The programs included here are not needed for running
