@@ -8,7 +8,7 @@ Summary:        Adwaita-Scarecrow icon theme
 
 License:        LGPLv3+ or CC-BY-SA
 URL:            http://www.gnome.org
-Source0:        https://github.com/scarecrow-de/Adwaita-Scarecrow/archive/refs/tags/%{version}.tar.gz
+Source0:        https://github.com/scarecrow-de/scarecrow-adwaita-icon-theme/archive/refs/tags/%{version}.tar.gz
 
 BuildArch:      noarch
 
