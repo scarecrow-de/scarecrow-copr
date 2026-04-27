@@ -131,14 +131,14 @@ the functionality of the installed %{name} package.
 %install
 %meson_install
 
-%find_lang %{name}
+%find_lang mutter
 
 # Mutter contains a .desktop file so we just need to validate it
-desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
+desktop-file-validate %{buildroot}/%{_datadir}/applications/%mutter.desktop
 
 %ldconfig_scriptlets
 
-%files -f %{name}.lang
+%files -f mutter.lang
 %license COPYING
 %doc NEWS
 %{_bindir}/mutter

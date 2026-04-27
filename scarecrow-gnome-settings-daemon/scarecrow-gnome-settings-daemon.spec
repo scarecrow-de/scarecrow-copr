@@ -97,11 +97,11 @@ developing applications that use %{name}.
 
 cp %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/glib-2.0/schemas
 
-%find_lang %{name} --with-gnome
+%find_lang gnome-settings-daemon --with-gnome
 
 mkdir $RPM_BUILD_ROOT%{_libdir}/gnome-settings-daemon-3.0/gtk-modules
 
-%files -f %{name}.lang
+%files -f gnome-settings-daemon.lang
 %license COPYING
 %doc AUTHORS NEWS
 
