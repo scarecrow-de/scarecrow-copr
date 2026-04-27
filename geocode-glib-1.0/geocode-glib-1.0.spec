@@ -2,7 +2,7 @@
 
 Name:           geocode-glib-1.0
 Version:        3.26.2
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Geocoding helper library
 
 License:        LGPLv2+
