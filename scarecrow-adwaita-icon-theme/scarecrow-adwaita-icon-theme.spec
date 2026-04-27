@@ -2,7 +2,7 @@
 %global bootstrap 0
 
 Name:           scarecrow-adwaita-icon-theme
-Version:        3.38.0
+Version:        3.38.0.1
 Release:        1%{?dist}
 Summary:        Adwaita-Scarecrow icon theme
 
@@ -86,7 +86,7 @@ gtk-update-icon-cache --force %{_datadir}/icons/Adwaita-Scarecrow &>/dev/null ||
 %{_datadir}/pkgconfig/adwaita-icon-theme.pc
 
 %changelog
-* Mon Apr 27 2026 Marcel Mrówka <micro.mail88@gmail.com> - 3.38.0-1
+* Mon Apr 27 2026 Marcel Mrówka <micro.mail88@gmail.com> - 3.38.0.1-1
 - Initial release for SCARECROW
 
 * Mon Sep 14 2020 Kalev Lember <klember@redhat.com> - 3.38.0-1
