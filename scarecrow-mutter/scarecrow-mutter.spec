@@ -83,7 +83,7 @@ Obsoletes: mutter-wayland-devel < 3.13.0
 Conflicts: gnome-shell < 3.21.1
 
 Requires: control-center-filesystem
-Requires: gsettings-desktop-schemas%{?_isa} >= %{gsettings_desktop_schemas_version}
+Requires: scarecrow-gsettings-desktop-schemas%{?_isa} >= %{gsettings_desktop_schemas_version}
 Requires: gtk3%{?_isa} >= %{gtk3_version}
 Requires: pipewire%{_isa} >= %{pipewire_version}
 Requires: startup-notification
