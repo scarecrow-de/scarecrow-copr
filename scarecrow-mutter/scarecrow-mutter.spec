@@ -13,8 +13,8 @@ Summary:       Window and compositing manager based on Clutter
 
 License:       GPLv2+
 #VCS:          git:git://git.gnome.org/mutter
-URL:           http://www.gnome.org
-Source0:       http://download.gnome.org/sources/mutter/3.38/mutter-%{version}.tar.xz
+URL:           https://www.gnome.org
+Source0:       https://download.gnome.org/sources/mutter/3.38/mutter-%{version}.tar.xz
 
 # Work-around for OpenJDK's compliance test
 Patch0:        0001-window-actor-Special-case-shaped-Java-windows.patch
