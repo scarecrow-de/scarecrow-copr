@@ -17,7 +17,7 @@ BuildRequires:  pkgconfig(gtk+-3.0) >= 3.13.5
 BuildRequires:  pkgconfig(libsoup-2.4) >= 2.34
 BuildRequires:  pkgconfig(libxml-2.0) >= 2.6.0
 BuildRequires:  vala
-Provides:	pkgconfig(gweather-3.0) = %{version}
+
 
 %description
 libgweather is a library to access weather information from online
@@ -26,6 +26,7 @@ services for numerous locations.
 %package        devel
 Summary:        Development files for %{name}
 Requires:       %{name}%{_isa} = %{version}-%{release}
+Provides:	pkgconfig(gweather-3.0) = %{version}
 
 %description    devel
 The %{name}-devel package contains libraries and header files for
