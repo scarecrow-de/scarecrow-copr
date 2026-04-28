@@ -60,8 +60,8 @@ Requires: iio-sensor-proxy
 Requires: geoclue2 >= %{geoclue_version}
 Requires: geocode-glib%{?_isa} >= %{geocode_glib_version}
 Requires: glib2%{?_isa} >= %{glib2_version}
-Requires: gnome-desktop3%{?_isa} >= %{gnome_desktop_version}
-Requires: gsettings-desktop-schemas%{?_isa} >= %{gsettings_desktop_schemas_version}
+Requires: scarecrow-gnome-desktop3%{?_isa} >= %{gnome_desktop_version}
+Requires: scarecrow-gsettings-desktop-schemas%{?_isa} >= %{gsettings_desktop_schemas_version}
 Requires: gtk3%{?_isa} >= %{gtk3_version}
 Requires: libgweather%{?_isa} >= %{libgweather_version}
 

@@ -22,7 +22,7 @@ Patch0:        0001-window-actor-Special-case-shaped-Java-windows.patch
 BuildRequires: chrpath
 BuildRequires: pango-devel
 BuildRequires: startup-notification-devel
-BuildRequires: gnome-desktop3-devel
+BuildRequires: scarecrow-gnome-desktop3-devel
 BuildRequires: glib2-devel >= %{glib_version}
 BuildRequires: gtk3-devel >= %{gtk3_version}
 BuildRequires: pkgconfig
@@ -56,7 +56,7 @@ BuildRequires: systemd-devel
 BuildRequires: upower-devel
 BuildRequires: xorg-x11-server-Xorg
 BuildRequires: xkeyboard-config-devel
-BuildRequires: zenity
+BuildRequires: scarecrow-zenity
 BuildRequires: desktop-file-utils
 # Bootstrap requirements
 BuildRequires: gtk-doc scarecrow-common gettext-devel git
