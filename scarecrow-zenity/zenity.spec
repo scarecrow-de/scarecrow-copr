@@ -1,6 +1,6 @@
 Name:          scarecrow-zenity
-Version:       3.32.0
-Release:       4%{?dist}
+Version:       3.32.0.1
+Release:       1%{?dist}
 Summary:       Display dialog boxes from shell scripts
 
 License:       LGPLv2+
