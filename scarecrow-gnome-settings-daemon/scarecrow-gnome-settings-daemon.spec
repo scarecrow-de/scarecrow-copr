@@ -9,7 +9,7 @@
 
 Name:           scarecrow-gnome-settings-daemon
 Version:        3.32.2.5
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        The daemon sharing settings from SCARECROW to GTK+/KDE applications
 
 License:        GPLv2+
@@ -30,7 +30,7 @@ BuildRequires:  pkgconfig(gcr-base-3)
 BuildRequires:  pkgconfig(geoclue-2.0) >= %{geoclue_version}
 BuildRequires:  pkgconfig(geocode-glib-1.0) >= %{geocode_glib_version}
 BuildRequires:  pkgconfig(glib-2.0) >= %{glib2_version}
-BuildRequires:  pkgconfig(gnome-desktop-3.0) >= %{gnome_desktop_version}
+BuildRequires:  scarecrow-gnome-desktop3-devel >= %{gnome_desktop_version}
 BuildRequires:  pkgconfig(gsettings-desktop-schemas) >= %{gsettings_desktop_schemas_version}
 BuildRequires:  pkgconfig(gtk+-3.0) >= %{gtk3_version}
 BuildRequires:  pkgconfig(gudev-1.0)
