@@ -21,7 +21,7 @@ shell scripts. It is similar to gdialog, but is intended to be saner. It comes
 from the same family as dialog, Xdialog, and cdialog.
 
 %prep
-%setup -q -n zenity-{version}
+%setup -q -n zenity-%{version}
 
 
 %build
