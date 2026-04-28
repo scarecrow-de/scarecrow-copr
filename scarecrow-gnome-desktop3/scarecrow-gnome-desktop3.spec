@@ -10,8 +10,8 @@ Release: 1%{?dist}
 Summary: Library with common API for various GNOME modules
 
 License: GPLv2+ and LGPLv2+
-URL: http://www.gnome.org
-Source0: http://download.gnome.org/sources/gnome-desktop/3.38/gnome-desktop-%{version}.tar.xz
+URL: https://www.gnome.org
+Source0: https://download.gnome.org/sources/gnome-desktop/3.38/gnome-desktop-%{version}.tar.xz
 
 BuildRequires: gcc
 BuildRequires: gettext
@@ -22,7 +22,7 @@ BuildRequires: pkgconfig(gdk-pixbuf-2.0) >= %{gdk_pixbuf2_version}
 BuildRequires: pkgconfig(gio-2.0) >= %{glib2_version}
 BuildRequires: pkgconfig(glib-2.0) >= %{glib2_version}
 BuildRequires: pkgconfig(gobject-introspection-1.0)
-BuildRequires: pkgconfig(gsettings-desktop-schemas) >= %{gsettings_desktop_schemas_version}
+BuildRequires: scarecrow-gsettings-desktop-schemas-devel >= %{gsettings_desktop_schemas_version}
 BuildRequires: pkgconfig(gtk+-3.0) >= %{gtk3_version}
 BuildRequires: pkgconfig(iso-codes)
 BuildRequires: pkgconfig(libseccomp)
