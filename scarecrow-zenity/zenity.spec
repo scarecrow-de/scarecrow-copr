@@ -25,6 +25,7 @@ from the same family as dialog, Xdialog, and cdialog.
 
 
 %build
+%set_build_flags
 %configure --disable-webkitgtk
 make V=1 %{?_smp_mflags}
 
