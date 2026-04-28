@@ -5,7 +5,7 @@ Summary:       Display dialog boxes from shell scripts
 
 License:       LGPLv2+
 URL:           https://wiki.gnome.org/Projects/Zenity
-Source:        https://download.gnome.org/sources/zenity/3.32/zenity-%{version}.tar.xz
+Source:        https://github.com/scarecrow-de/scarecrow-zenity/archive/refs/tags/%{version}.tar.gz
 
 BuildRequires:  gcc
 BuildRequires: pkgconfig(gtk+-3.0) >= 3.0.0
@@ -21,7 +21,7 @@ shell scripts. It is similar to gdialog, but is intended to be saner. It comes
 from the same family as dialog, Xdialog, and cdialog.
 
 %prep
-%setup -q -n zenity-%{version}
+%setup -q
 
 
 %build
