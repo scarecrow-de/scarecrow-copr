@@ -8,7 +8,7 @@
 %global geoclue_version 2.3.1
 
 Name:           scarecrow-gnome-settings-daemon
-Version:        3.32.2.5
+Version:        3.32.2.6
 Release:        3%{?dist}
 Summary:        The daemon sharing settings from SCARECROW to GTK+/KDE applications
 
