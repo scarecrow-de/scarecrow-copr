@@ -30,11 +30,11 @@ BuildRequires:  pkgconfig(gcr-base-3)
 BuildRequires:  pkgconfig(geoclue-2.0) >= %{geoclue_version}
 BuildRequires:  pkgconfig(geocode-glib-1.0) >= %{geocode_glib_version}
 BuildRequires:  pkgconfig(glib-2.0) >= %{glib2_version}
-BuildRequires:  scarecrow-gnome-desktop3-devel >= %{gnome_desktop_version}
-BuildRequires:  pkgconfig(gsettings-desktop-schemas) >= %{gsettings_desktop_schemas_version}
+BuildRequires:  pkgconfig(gnome-desktop-3.0) >= %{gnome_desktop_version}
+BuildRequires:  scarecrow-gsettings-desktop-schemas-devel >= %{gsettings_desktop_schemas_version}
 BuildRequires:  pkgconfig(gtk+-3.0) >= %{gtk3_version}
 BuildRequires:  pkgconfig(gudev-1.0)
-BuildRequires:  pkgconfig(gweather-3.0) >= %{libgweather_version}
+BuildRequires:  pkgconfig(gweather4) >= %{libgweather_version}
 BuildRequires:  pkgconfig(lcms2) >= 2.2
 BuildRequires:  pkgconfig(libcanberra-gtk3)
 BuildRequires:  pkgconfig(libgeoclue-2.0)
