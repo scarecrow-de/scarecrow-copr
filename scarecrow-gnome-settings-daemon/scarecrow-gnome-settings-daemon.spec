@@ -93,7 +93,7 @@ developing applications that use %{name}.
 %prep
 # %autosetup -p1
 # Fix for this release only
-%autosetup -p1 -n %{name}-3.38.2
+%autosetup -p1 -n scarecrow-settings-daemon-3.38.2
 
 %build
 %meson
