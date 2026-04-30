@@ -181,7 +181,7 @@ mkdir $RPM_BUILD_ROOT%{_libdir}/scarecrow-settings-daemon-3.0/gtk-modules
 %{_libexecdir}/gsd-wwan
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow.settings-daemon.plugins.wwan.gschema.xml
 
-%{_libdir}/scarecrow-settings-daemon-3.0/libscarecrow_gsd
+%{_libdir}/scarecrow-settings-daemon-3.0/libscarecrow_gsd.so
 
 %{_sysconfdir}/xdg/Xwayland-session.d/00-xrdb
 %{_userunitdir}/*
