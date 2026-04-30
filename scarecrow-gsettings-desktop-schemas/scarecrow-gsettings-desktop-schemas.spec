@@ -1,8 +1,8 @@
 %global debug_package %{nil}
 
 Name:           scarecrow-gsettings-desktop-schemas
-Version:        3.38.0
-Release:        2%{?dist}
+Version:        3.38.1
+Release:        1%{?dist}
 Summary:        A collection of GSettings schemas
 
 License:        LGPLv2+
@@ -76,6 +76,9 @@ glib-compile-schemas --dry-run --strict %{buildroot}%{_datadir}/glib-2.0/schemas
 
 
 %changelog
+* Thu Apr 30 2026 Marcel Mrówka <micro.mail88@gmail.com> -3.38.0-1
+- Update to 3.38.1
+
 * Mon Apr 27 2026 Marcel Mrówka <micro.mail88@gmail.com> -3.38.0-1
 - Initial release for SCARECROW.
 
