@@ -60,7 +60,7 @@ Requires: iio-sensor-proxy
 Requires: geoclue2 >= %{geoclue_version}
 Requires: geocode-glib%{?_isa} >= %{geocode_glib_version}
 Requires: glib2%{?_isa} >= %{glib2_version}
-Requires: scarecrow-gnome-desktop3%{?_isa} >= %{gnome_desktop_version}
+Requires: gnome-desktop3%{?_isa} >= %{gnome_desktop_version}
 Requires: scarecrow-gsettings-desktop-schemas%{?_isa} >= %{gsettings_desktop_schemas_version}
 Requires: gtk3%{?_isa} >= %{gtk3_version}
 Requires: libgweather%{?_isa} >= %{libgweather_version}
@@ -76,7 +76,7 @@ Conflicts: gnome-session < 3.33.90
 Provides:	gnome-settings-daemon = %{version}
 
 %description
-A daemon to share settings from GNOME to other applications. It also
+A daemon to share settings from Scarecrow to other applications. It also
 handles global keybindings, as well as a number of desktop-wide settings.
 
 %package        devel
@@ -102,11 +102,11 @@ developing applications that use %{name}.
 
 cp %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/glib-2.0/schemas
 
-%find_lang gnome-settings-daemon --with-gnome
+%find_lang %{name} --with-gnome
 
-mkdir $RPM_BUILD_ROOT%{_libdir}/gnome-settings-daemon-3.0/gtk-modules
+mkdir $RPM_BUILD_ROOT%{_libdir}/scarecrow-settings-daemon-3.0/gtk-modules
 
-%files -f gnome-settings-daemon.lang
+%files -f %{name}.lang
 %license COPYING
 %doc AUTHORS NEWS
 
@@ -181,20 +181,20 @@ mkdir $RPM_BUILD_ROOT%{_libdir}/gnome-settings-daemon-3.0/gtk-modules
 %{_libexecdir}/gsd-wwan
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow.settings-daemon.plugins.wwan.gschema.xml
 
-%{_libdir}/gnome-settings-daemon-3.0/libgsd.so
+%{_libdir}/scarecrow-settings-daemon-3.0/libgsd.so
 
 %{_sysconfdir}/xdg/Xwayland-session.d/00-xrdb
 %{_userunitdir}/*
 /usr/lib/udev/rules.d/*.rules
-%{_datadir}/gnome-settings-daemon/
-%{_datadir}/GConf/gsettings/gnome-settings-daemon.convert
+%{_datadir}/scarecrow-settings-daemon/
+%{_datadir}/GConf/gsettings/scarecrow-settings-daemon.convert
 
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow.settings-daemon.enums.xml
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow.settings-daemon.plugins.gschema.xml
 
 %files devel
-%{_includedir}/gnome-settings-daemon-3.0
-%{_libdir}/pkgconfig/gnome-settings-daemon.pc
+%{_includedir}/scarecrow-settings-daemon-3.0
+%{_libdir}/pkgconfig/scarecrow-settings-daemon.pc
 
 %changelog
 * Thu Apr 30 2026 Marcel Mrówka <micro.mail88@gmail.com> - 3.38.3-1
