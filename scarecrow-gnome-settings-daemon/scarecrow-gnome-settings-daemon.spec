@@ -197,7 +197,7 @@ mkdir $RPM_BUILD_ROOT%{_libdir}/scarecrow-settings-daemon-3.0/gtk-modules
 %{_libdir}/pkgconfig/scarecrow-settings-daemon.pc
 
 %changelog
-* Thu Apr 30 2026 Marcel Mrówka <micro.mail88@gmail.com> - 3.38.3-1
+* Thu Apr 30 2026 Marcel Mrówka <micro.mail88@gmail.com> - 3.38.4-1
 - Update to 3.38.4
 
 * Thu Apr 30 2026 Marcel Mrówka <micro.mail88@gmail.com> - 3.38.3-1
