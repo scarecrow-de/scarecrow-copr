@@ -14,7 +14,7 @@ Summary:        The daemon sharing settings from SCARECROW to GTK+/KDE applicati
 
 License:        GPLv2+
 URL:            https://github.com/scarecrow-de/%{name}
-Source0:        https://github.com/scarecrow-de/scarecrow-settings-daemon/releases/download/%{version}/scarecrow-settings-daemon-%{version}.tar.xz
+Source0:        https://github.com/scarecrow-de/scarecrow-settings-daemon/releases/download/3.38.3/scarecrow-settings-daemon-3.38.2.tar.xz
 Source1:        io.github.scarecrow.settings-daemon.plugins.power.gschema.override
 
 BuildRequires:  meson >= 0.44.0
