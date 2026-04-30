@@ -8,14 +8,14 @@
 %global geoclue_version 2.3.1
 
 Name:           scarecrow-gnome-settings-daemon
-Version:        3.32.2.6
+Version:        3.32.3
 Release:        1%{?dist}
 Summary:        The daemon sharing settings from SCARECROW to GTK+/KDE applications
 
 License:        GPLv2+
 URL:            https://github.com/scarecrow-de/%{name}
-Source0:        https://github.com/scarecrow-de/%{name}/archive/refs/tags/%{version}.tar.gz
-Source1:        org.gnome.settings-daemon.plugins.power.gschema.override
+Source0:        https://github.com/scarecrow-de/scarecrow-settings-daemon/releases/download/%{version}/scarecrow-settings-daemon-%{version}.tar.xz
+Source1:        io.github.scarecrow.settings-daemon.plugins.power.gschema.override
 
 BuildRequires:  meson >= 0.44.0
 BuildRequires:  cmake
@@ -28,7 +28,7 @@ BuildRequires:  pkgconfig(colord) >= %{colord_version}
 BuildRequires:  pkgconfig(fontconfig)
 BuildRequires:  pkgconfig(gcr-base-3)
 BuildRequires:  pkgconfig(geoclue-2.0) >= %{geoclue_version}
-BuildRequires:  pkgconfig(geocode-glib-1.0) >= %{geocode_glib_version}
+BuildRequires:  pkgconfig(geocode-glib-2.0) >= %{geocode_glib_version}
 BuildRequires:  pkgconfig(glib-2.0) >= %{glib2_version}
 BuildRequires:  pkgconfig(gnome-desktop-3.0) >= %{gnome_desktop_version}
 BuildRequires:  scarecrow-gsettings-desktop-schemas-devel >= %{gsettings_desktop_schemas_version}
@@ -197,6 +197,9 @@ mkdir $RPM_BUILD_ROOT%{_libdir}/gnome-settings-daemon-3.0/gtk-modules
 %{_libdir}/pkgconfig/gnome-settings-daemon.pc
 
 %changelog
+* Thu Apr 30 2026 Marcel Mrówka <micro.mail88@gmail.com> - 3.38.3-1
+- Update to 3.38.3
+
 * Mon Apr 27 2026 Marcel Mrówka <micro.mail88@gmail.com> - 3.38.2-1
 - Update to 3.38.2. Initial release for SCARECROW
 
