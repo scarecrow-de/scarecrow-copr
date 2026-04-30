@@ -91,9 +91,7 @@ The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
 
 %prep
-# %autosetup -p1
-# Fix for this release only
-%autosetup -p1 -n scarecrow-settings-daemon-3.38.2
+%autosetup -p1
 
 %build
 %meson
