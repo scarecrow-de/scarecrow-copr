@@ -52,7 +52,7 @@ and header files for developing applications that use %{name}.
 %install
 %meson_install
 
-%find_lang gsettings-desktop-schemas --with-gnome
+%find_lang %{name} --with-gnome
 
 
 %check
