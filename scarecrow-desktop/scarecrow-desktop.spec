@@ -2,7 +2,7 @@
 %global gtk3_version                      3.3.6
 %global glib2_version                     2.53.0
 %global gsettings_desktop_schemas_version 3.27.0
-%global po_package                        gnome-desktop-3.0
+%global po_package                        scarecrow-desktop-3.0
 
 Name: scarecrow-desktop
 Version: 3.39.0
