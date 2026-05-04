@@ -4,14 +4,14 @@
 %global gsettings_desktop_schemas_version 3.27.0
 %global po_package                        gnome-desktop-3.0
 
-Name: scarecrow-gnome-desktop3
-Version: 3.38.1
+Name: scarecrow-desktop
+Version: 3.39.0
 Release: 1%{?dist}
 Summary: Library with common API for various GNOME modules
 
 License: GPLv2+ and LGPLv2+
-URL: https://www.gnome.org
-Source0: https://download.gnome.org/sources/gnome-desktop/3.38/gnome-desktop-%{version}.tar.xz
+URL: https://github.com/scarecrow-de/scarecrow-desktop
+Source0: https://github.com/scarecrow-de/scarecrow-desktop/archive/refs/heads/main.tar.gz
 
 BuildRequires: gcc
 BuildRequires: gettext
@@ -39,15 +39,14 @@ Requires: scarecrow-gsettings-desktop-schemas >= %{gsettings_desktop_schemas_ver
 
 # GnomeBGSlideShow API change breaks older gnome-shell versions
 Conflicts: gnome-shell < 3.33.4
+Conflicts: scarecrow-shell < 3.33.4
 
-Provides:  gnome-desktop3 = %{version}
-Provides:  gnome-desktop = %{version}
 
 %description
-gnome-desktop contains the libgnome-desktop library as well as a data
-file that exports the "GNOME" version to the Settings Details panel.
+scarecrow-desktop contains the libgnome-desktop library as well as a data
+file that exports the "Scarecrow" version to the Settings Details panel.
 
-The libgnome-desktop library provides API shared by several applications
+The libscarecrow-desktop library provides API shared by several applications
 on the desktop, but that cannot live in the platform for various
 reasons. There is no API or ABI guarantee, although we are doing our
 best to provide stability. Documentation for the API is available with
@@ -58,9 +57,6 @@ Summary: Libraries and headers for %{name}
 License: LGPLv2+
 Requires: %{name}%{?_isa} = %{version}-%{release}
 
-Provides:  gnome-desktop3-devel = %{version}
-Provides:  gnome-desktop-devel = %{version}
-
 %description devel
 The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
@@ -69,15 +65,12 @@ developing applications that use %{name}.
 Summary:  Tests for the %{name} package
 Requires: %{name}%{?_isa} = %{version}-%{release}
 
-Provides:  gnome-desktop3-tests = %{version}
-Provides:  gnome-desktop-tests = %{version}
-
 %description tests
 The %{name}-tests package contains tests that can be used to verify
 the functionality of the installed %{name} package.
 
 %prep
-%autosetup -p1 -n gnome-desktop-%{version}
+%autosetup -p1 -n %{name}-main
 
 %build
 %meson -Dgtk_doc=true -Dinstalled_tests=true
@@ -91,26 +84,29 @@ the functionality of the installed %{name} package.
 %files -f %{po_package}.lang
 %doc AUTHORS NEWS README
 %license COPYING COPYING.LIB
-%{_datadir}/gnome/gnome-version.xml
-%{_libexecdir}/gnome-rr-debug
+%{_datadir}/scarecrow/scarecrow-version.xml
+%{_libexecdir}/scarecrow-rr-debug
 # LGPL
-%{_libdir}/libgnome-desktop-3.so.19{,.*}
-%{_libdir}/girepository-1.0/GnomeDesktop-3.0.typelib
+%{_libdir}/libscarecrow-desktop-3.so.19{,.*}
+%{_libdir}/girepository-1.0/ScarecrowDesktop-3.0.typelib
 
 %files devel
 %{_libdir}/lib*.so
 %{_libdir}/pkgconfig/*
 %{_includedir}/*
-%{_datadir}/gir-1.0/GnomeDesktop-3.0.gir
+%{_datadir}/gir-1.0/ScarecrowDesktop-3.0.gir
 %dir %{_datadir}/gtk-doc/
 %dir %{_datadir}/gtk-doc/html/
-%doc %{_datadir}/gtk-doc/html/gnome-desktop3/
+%doc %{_datadir}/gtk-doc/html/scarecrow-desktop3/
 
 %files tests
-%{_libexecdir}/installed-tests/gnome-desktop
+%{_libexecdir}/installed-tests/scarecrow-desktop
 %{_datadir}/installed-tests
 
 %changelog
+* Mon May 04 2026 Marcel Mrówka <micro.mail88@gmail.com> - 3.39.0-1
+- Update to 3.39.0
+
 * Mon Oct  5 2020 Kalev Lember <klember@redhat.com> - 3.38.1-1
 - Update to 3.38.1
 

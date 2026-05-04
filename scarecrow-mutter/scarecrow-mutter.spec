@@ -13,8 +13,8 @@ Summary:       Window and compositing manager based on Clutter
 
 License:       GPLv2+
 #VCS:          git:git://git.gnome.org/mutter
-URL:           https://www.gnome.org
-Source0:       https://download.gnome.org/sources/mutter/3.38/mutter-%{version}.tar.xz
+URL:           https://github.com/scarecrow-de/mutter
+Source0:       https://github.com/scarecrow-de/mutter/archive/refs/heads/main.tar.gz
 
 # Work-around for OpenJDK's compliance test
 Patch0:        0001-window-actor-Special-case-shaped-Java-windows.patch
@@ -22,7 +22,7 @@ Patch0:        0001-window-actor-Special-case-shaped-Java-windows.patch
 BuildRequires: chrpath
 BuildRequires: pango-devel
 BuildRequires: startup-notification-devel
-BuildRequires: scarecrow-gnome-desktop3-devel
+BuildRequires: scarecrow-desktop-devel
 BuildRequires: glib2-devel >= %{glib_version}
 BuildRequires: gtk3-devel >= %{gtk3_version}
 BuildRequires: pkgconfig
@@ -62,7 +62,7 @@ BuildRequires: desktop-file-utils
 BuildRequires: gtk-doc scarecrow-common gettext-devel git
 BuildRequires: libcanberra-devel
 BuildRequires: scarecrow-gsettings-desktop-schemas-devel >= %{gsettings_desktop_schemas_version}
-BuildRequires: scarecrow-gnome-settings-daemon-devel
+BuildRequires: scarecrow-settings-daemon-devel
 BuildRequires: meson
 BuildRequires: pkgconfig(gudev-1.0)
 BuildRequires: pkgconfig(libdrm)
@@ -88,7 +88,7 @@ Requires: gtk3%{?_isa} >= %{gtk3_version}
 Requires: pipewire%{_isa} >= %{pipewire_version}
 Requires: startup-notification
 Requires: dbus
-Requires: zenity
+Requires: scarecrow-zenity
 
 Requires:      json-glib%{?_isa} >= %{json_glib_version}
 Requires:      libinput%{?_isa} >= %{libinput_version}
@@ -153,9 +153,9 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/%mutter.desktop
 %{_libdir}/mutter-%{mutter_api_version}/
 %{_libexecdir}/mutter-restart-helper
 %{_datadir}/GConf/gsettings/mutter-schemas.convert
-%{_datadir}/glib-2.0/schemas/org.gnome.mutter.gschema.xml
-%{_datadir}/glib-2.0/schemas/org.gnome.mutter.wayland.gschema.xml
-%{_datadir}/gnome-control-center/keybindings/50-mutter-*.xml
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.mutter.gschema.xml
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.wayland.gschema.xml
+%{_datadir}/scarecrow-control-center/keybindings/50-mutter-*.xml
 %{_mandir}/man1/mutter.1*
 %{_udevrulesdir}/61-mutter.rules
 

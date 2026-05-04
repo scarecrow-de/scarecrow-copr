@@ -1,11 +1,11 @@
 Name:           scarecrow-shell
-Version:        3.38.6
+Version:        3.39.0
 Release:        1%{?dist}
 Summary:        Window management and application launching for Scarecrow
 License:        GPLv2+
 URL:            https://github.com/scarecrow-de/scarecrow-gnome-shell/
 #VCS:           git:git://git.gnome.org/gnome-shell
-Source0:        https://github.com/scarecrow-de/scarecrow-gnome-shell/archive/refs/tags/%{version}.tar.gz
+Source0:        https://github.com/scarecrow-de/scarecrow-gnome-shell/archive/refs/heads/main.tar.gz
 
 %define eds_version 3.33.1
 %define gnome_desktop_version 3.35.91
@@ -35,7 +35,7 @@ BuildRequires:  gcr-devel
 BuildRequires:  gjs-devel >= %{gjs_version}
 BuildRequires:  glib2-devel >= %{glib2_version}
 BuildRequires:  gnome-autoar-devel
-BuildRequires:  pkgconfig(gnome-desktop-3.0)
+BuildRequires:  scarecrow-desktop-devel
 BuildRequires:  gobject-introspection >= %{gobject_introspection_version}
 BuildRequires:  mesa-libGL-devel
 BuildRequires:  mesa-libEGL-devel
@@ -57,7 +57,7 @@ BuildRequires:  python3
 BuildRequires:  libXfixes-devel >= 5.0
 # used in unused BigThemeImage
 BuildRequires:  librsvg2-devel
-BuildRequires:  mutter-devel >= %{mutter_version}
+BuildRequires:  scarecrow-mutter-devel >= %{mutter_version}
 BuildRequires:  pulseaudio-libs-devel
 %ifnarch s390 s390x ppc ppc64 ppc64p7
 BuildRequires:  scarecrow-bluetooth-libs-devel >= %{gnome_bluetooth_version}
@@ -67,7 +67,7 @@ BuildRequires: gtk-doc
 %ifnarch s390 s390x
 Requires:       scarecrow-bluetooth%{?_isa} >= %{gnome_bluetooth_version}
 %endif
-Requires:       gnome-desktop3%{?_isa} >= %{gnome_desktop_version}
+Requires:       scarecrow-desktop%{?_isa} >= %{gnome_desktop_version}
 %if 0%{?rhel} != 7
 # Disabled on RHEL 7 to allow logging into KDE session by default
 Requires:       scarecrow-session-xsession
@@ -80,10 +80,10 @@ Requires:       gtk3%{?_isa} >= %{gtk3_version}
 Requires:       libnma%{?_isa}
 # needed for loading SVG's via gdk-pixbuf
 Requires:       librsvg2%{?_isa}
-Requires:       mutter%{?_isa} >= %{mutter_version}
+Requires:       scarecrow-mutter%{?_isa} >= %{mutter_version}
 Requires:       upower%{?_isa}
 Requires:       polkit%{?_isa} >= %{polkit_version}
-Requires:       gnome-desktop3%{?_isa} >= %{gnome_desktop_version}
+Requires:       scarecrow-desktop%{?_isa} >= %{gnome_desktop_version}
 Requires:       glib2%{?_isa} >= %{glib2_version}
 Requires:       scarecrow-gsettings-desktop-schemas%{?_isa} >= %{gsettings_desktop_schemas_version}
 Requires:       scarecrow-settings-daemon%{?_isa} >= %{gnome_settings_daemon_version}
@@ -154,7 +154,7 @@ mkdir -p %{buildroot}%{_datadir}/scarecrow-shell/search-providers
 %find_lang %{name}
 
 %check
-desktop-file-validate %{buildroot}%{_datadir}/applications/io.github.scarecrow.Shell.desktop
+desktop-file-validate %{buildroot}%{_datadir}/applications/io.github.scarecrow_de.Shell.desktop
 desktop-file-validate %{buildroot}%{_datadir}/applications/evolution-calendar.desktop
 
 %files -f %{name}.lang
@@ -166,33 +166,33 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/evolution-calendar.de
 %{_bindir}/scarecrow-shell-extension-tool
 %{_bindir}/scarecrow-shell-perf-tool
 %{_datadir}/glib-2.0/schemas/*.xml
-%{_datadir}/glib-2.0/schemas/00_io.github.scarecrow.shell.gschema.override
-%{_datadir}/applications/io.github.scarecrow.Extensions.desktop
-%{_datadir}/applications/io.github.scarecrow.desktop
+%{_datadir}/glib-2.0/schemas/00_io.github.scarecrow_de.shell.gschema.override
+%{_datadir}/applications/io.github.scarecrow_de.Extensions.desktop
+%{_datadir}/applications/io.github.scarecrow_de.desktop
 %{_datadir}/applications/evolution-calendar.desktop
-%{_datadir}/applications/io.github.scarecrow.PortalHelper.desktop
+%{_datadir}/applications/io.github.scarecrow_de.PortalHelper.desktop
 %{_datadir}/bash-completion/completions/scarecrow-extensions
 %{_datadir}/scarecrow-control-center/keybindings/50-scarecrow-shell-system.xml
 %{_datadir}/scarecrow-shell/
-%{_datadir}/dbus-1/services/io.github.scarecrow.Shell.CalendarServer.service
-%{_datadir}/dbus-1/services/io.github.scarecrow.Shell.Extensions.service
-%{_datadir}/dbus-1/services/io.github.scarecrow.Shell.HotplugSniffer.service
-%{_datadir}/dbus-1/services/io.github.scarecrow.Shell.Notifications.service
-%{_datadir}/dbus-1/services/io.github.scarecrow.Shell.PortalHelper.service
-%{_datadir}/dbus-1/services/io.github.scarecrow.Shell.Screencast.service
-%{_datadir}/dbus-1/interfaces/io.github.scarecrow.Shell.Extensions.xml
-%{_datadir}/dbus-1/interfaces/io.github.scarecrow.Shell.Introspect.xml
-%{_datadir}/dbus-1/interfaces/io.github.scarecrow.Shell.PadOsd.xml
-%{_datadir}/dbus-1/interfaces/io.github.scarecrow.Shell.Screencast.xml
-%{_datadir}/dbus-1/interfaces/io.github.scarecrow.Shell.Screenshot.xml
-%{_datadir}/dbus-1/interfaces/io.github.scarecrow.ShellSearchProvider.xml
-%{_datadir}/dbus-1/interfaces/io.github.scarecrow.ShellSearchProvider2.xml
-%{_datadir}/icons/hicolor/scalable/apps/io.github.scarecrow.Shell.Extensions.svg
-%{_datadir}/icons/hicolor/symbolic/apps/io.github.scarecrow.Shell.Extensions-symbolic.svg
-%{_userunitdir}/io.github.scarecrow.Shell-disable-extensions.service
-%{_userunitdir}/io.github.scarecrow.Shell.target
-%{_userunitdir}/io.github.scarecrow.Shell@wayland.service
-%{_userunitdir}/io.github.scarecrow.Shell@x11.service
+%{_datadir}/dbus-1/services/io.github.scarecrow_de.Shell.CalendarServer.service
+%{_datadir}/dbus-1/services/io.github.scarecrow_de.Shell.Extensions.service
+%{_datadir}/dbus-1/services/io.github.scarecrow_de.Shell.HotplugSniffer.service
+%{_datadir}/dbus-1/services/io.github.scarecrow_de.Shell.Notifications.service
+%{_datadir}/dbus-1/services/io.github.scarecrow_de.Shell.PortalHelper.service
+%{_datadir}/dbus-1/services/io.github.scarecrow_de.Shell.Screencast.service
+%{_datadir}/dbus-1/interfaces/io.github.scarecrow_de.Shell.Extensions.xml
+%{_datadir}/dbus-1/interfaces/io.github.scarecrow_de.Shell.Introspect.xml
+%{_datadir}/dbus-1/interfaces/io.github.scarecrow_de.Shell.PadOsd.xml
+%{_datadir}/dbus-1/interfaces/io.github.scarecrow_de.Shell.Screencast.xml
+%{_datadir}/dbus-1/interfaces/io.github.scarecrow_de.Shell.Screenshot.xml
+%{_datadir}/dbus-1/interfaces/io.github.scarecrow_de.ShellSearchProvider.xml
+%{_datadir}/dbus-1/interfaces/io.github.scarecrow_de.ShellSearchProvider2.xml
+%{_datadir}/icons/hicolor/scalable/apps/io.github.scarecrow_de.Shell.Extensions.svg
+%{_datadir}/icons/hicolor/symbolic/apps/io.github.scarecrow_de.Shell.Extensions-symbolic.svg
+%{_userunitdir}/io.github.scarecrow_de.Shell-disable-extensions.service
+%{_userunitdir}/io.github.scarecrow_de.Shell.target
+%{_userunitdir}/io.github.scarecrow_de.Shell@wayland.service
+%{_userunitdir}/io.github.scarecrow_de.Shell@x11.service
 %{_sysconfdir}/xdg/autostart/scarecrow-shell-overrides-migration.desktop
 # Co own directory instead of pulling in xdg-desktop-portal - we
 # are providing a backend to the portal, not depending on it
@@ -213,6 +213,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/evolution-calendar.de
 %{_mandir}/man1/scarecrow-shell.1*
 
 %changelog
+* Thu Apr 30 2026 Marcel Mrówka <micro.mail88@gmail.com> - 3.38.6-1
+- Update to 3.39.0
+
 * Thu Apr 30 2026 Marcel Mrówka <micro.mail88@gmail.com> - 3.38.6-1
 - Update to 3.38.6
 

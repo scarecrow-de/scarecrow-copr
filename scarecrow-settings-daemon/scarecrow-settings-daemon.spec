@@ -8,14 +8,14 @@
 %global geoclue_version 2.3.1
 
 Name:           scarecrow-settings-daemon
-Version:        3.38.4
+Version:        3.38.5
 Release:        1%{?dist}
 Summary:        The daemon sharing settings from SCARECROW to GTK+/KDE applications
 
 License:        GPLv2+
 URL:            https://github.com/scarecrow-de/%{name}
-Source0:        https://github.com/scarecrow-de/%{name}/releases/download/%{version}/scarecrow-settings-daemon-%{version}.tar.xz
-Source1:        io.github.scarecrow.settings-daemon.plugins.power.gschema.override
+Source0:        https://github.com/scarecrow-de/scarecrow-settings-daemon/archive/refs/heads/main.tar.gz
+Source1:        io.github.scarecrow_de.settings-daemon.plugins.power.gschema.override
 
 BuildRequires:  meson >= 0.44.0
 BuildRequires:  cmake
@@ -30,7 +30,7 @@ BuildRequires:  pkgconfig(gcr-base-3)
 BuildRequires:  pkgconfig(geoclue-2.0) >= %{geoclue_version}
 BuildRequires:  pkgconfig(geocode-glib-2.0) >= %{geocode_glib_version}
 BuildRequires:  pkgconfig(glib-2.0) >= %{glib2_version}
-BuildRequires:  pkgconfig(gnome-desktop-3.0) >= %{gnome_desktop_version}
+BuildRequires:  scarecrow-desktop-devel >= %{gnome_desktop_version}
 BuildRequires:  scarecrow-gsettings-desktop-schemas-devel >= %{gsettings_desktop_schemas_version}
 BuildRequires:  pkgconfig(gtk+-3.0) >= %{gtk3_version}
 BuildRequires:  pkgconfig(gudev-1.0)
@@ -60,7 +60,7 @@ Requires: iio-sensor-proxy
 Requires: geoclue2 >= %{geoclue_version}
 Requires: geocode-glib%{?_isa} >= %{geocode_glib_version}
 Requires: glib2%{?_isa} >= %{glib2_version}
-Requires: gnome-desktop3%{?_isa} >= %{gnome_desktop_version}
+Requires: scarecrow-desktop%{?_isa} >= %{gnome_desktop_version}
 Requires: scarecrow-gsettings-desktop-schemas%{?_isa} >= %{gsettings_desktop_schemas_version}
 Requires: gtk3%{?_isa} >= %{gtk3_version}
 Requires: libgweather%{?_isa} >= %{libgweather_version}
@@ -72,6 +72,7 @@ Obsoletes: gnome-settings-daemon-devel < 3.23.1
 # Earlier gnome-session required "org.gnome.SettingsDaemon.Clipboard" that was
 # dropped in 3.33.90 (and functionality moved over to mutter).
 Conflicts: gnome-session < 3.33.90
+Conflicts: scarecrow-session < 3.33.90
 
 Provides:	gnome-settings-daemon = %{version}
 
@@ -82,9 +83,6 @@ handles global keybindings, as well as a number of desktop-wide settings.
 %package        devel
 Summary:        Development files for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
-
-Provides:	gnome-settings-daemon-devel = %{version}
-Provides:	pkgconfig(gnome-settings-daemon) = %{version}
 
 %description    devel
 The %{name}-devel package contains libraries and header files for
@@ -113,73 +111,73 @@ mkdir $RPM_BUILD_ROOT%{_libdir}/scarecrow-settings-daemon-3.0/gtk-modules
 # list daemons explicitly, so we notice if one goes missing
 # some of these don't have a separate gschema
 %{_libexecdir}/gsd-datetime
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.Datetime.desktop
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Datetime.desktop
 
 %{_libexecdir}/gsd-housekeeping
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.Housekeeping.desktop
-%{_datadir}/glib-2.0/schemas/io.github.scarecrow.settings-daemon.plugins.housekeeping.gschema.xml
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Housekeeping.desktop
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.housekeeping.gschema.xml
 
 %{_libexecdir}/gsd-keyboard
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.Keyboard.desktop
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Keyboard.desktop
 
 %{_libexecdir}/gsd-media-keys
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.MediaKeys.desktop
-%{_datadir}/glib-2.0/schemas/io.github.scarecrow.settings-daemon.plugins.media-keys.gschema.xml
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.MediaKeys.desktop
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.media-keys.gschema.xml
 
 %{_libexecdir}/gsd-backlight-helper
-%{_datadir}/polkit-1/actions/io.github.scarecrow.settings-daemon.plugins.power.policy
+%{_datadir}/polkit-1/actions/io.github.scarecrow_de.settings-daemon.plugins.power.policy
 %{_libexecdir}/gsd-power
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.Power.desktop
-%{_datadir}/glib-2.0/schemas/io.github.scarecrow.settings-daemon.plugins.power.gschema.xml
-%{_datadir}/glib-2.0/schemas/io.github.scarecrow.settings-daemon.plugins.power.gschema.override
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Power.desktop
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.power.gschema.xml
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.power.gschema.override
 
 %{_libexecdir}/gsd-print-notifications
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.PrintNotifications.desktop
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.PrintNotifications.desktop
 %{_libexecdir}/gsd-printer
 
 %{_libexecdir}/gsd-rfkill
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.Rfkill.desktop
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Rfkill.desktop
 
 %{_libexecdir}/gsd-screensaver-proxy
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.ScreensaverProxy.desktop
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.ScreensaverProxy.desktop
 
 %{_libexecdir}/gsd-smartcard
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.Smartcard.desktop
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Smartcard.desktop
 
 %{_libexecdir}/gsd-sound
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.Sound.desktop
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Sound.desktop
 
 %{_libexecdir}/gsd-usb-protection
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.UsbProtection.desktop
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.UsbProtection.desktop
 
-%{_datadir}/glib-2.0/schemas/io.github.scarecrow.settings-daemon.peripherals.gschema.xml
-%{_datadir}/glib-2.0/schemas/io.github.scarecrow.settings-daemon.peripherals.wacom.gschema.xml
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.Wacom.desktop
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.peripherals.gschema.xml
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.peripherals.wacom.gschema.xml
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Wacom.desktop
 
 %ifnarch s390 s390x
 %{_libexecdir}/gsd-wacom
 %{_libexecdir}/gsd-wacom-oled-helper
-%{_datadir}/polkit-1/actions/io.github.scarecrow.settings-daemon.plugins.wacom.policy
+%{_datadir}/polkit-1/actions/io.github.scarecrow_de.settings-daemon.plugins.wacom.policy
 %endif
 
 %{_libexecdir}/gsd-xsettings
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.XSettings.desktop
-%{_datadir}/glib-2.0/schemas/io.github.scarecrow.settings-daemon.plugins.xsettings.gschema.xml
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.XSettings.desktop
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.xsettings.gschema.xml
 
 %{_libexecdir}/gsd-a11y-settings
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.A11ySettings.desktop
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.A11ySettings.desktop
 
 %{_libexecdir}/gsd-color
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.Color.desktop
-%{_datadir}/glib-2.0/schemas/io.github.scarecrow.settings-daemon.plugins.color.gschema.xml
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Color.desktop
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.color.gschema.xml
 
 %{_libexecdir}/gsd-sharing
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.Sharing.desktop
-%{_datadir}/glib-2.0/schemas/io.github.scarecrow.settings-daemon.plugins.sharing.gschema.xml
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Sharing.desktop
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.sharing.gschema.xml
 
-%{_sysconfdir}/xdg/autostart/io.github.scarecrow.SettingsDaemon.Wwan.desktop
+%{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Wwan.desktop
 %{_libexecdir}/gsd-wwan
-%{_datadir}/glib-2.0/schemas/io.github.scarecrow.settings-daemon.plugins.wwan.gschema.xml
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.wwan.gschema.xml
 
 %{_libdir}/scarecrow-settings-daemon-3.0/libscarecrow_gsd.so
 
@@ -189,8 +187,8 @@ mkdir $RPM_BUILD_ROOT%{_libdir}/scarecrow-settings-daemon-3.0/gtk-modules
 %{_datadir}/scarecrow-settings-daemon/
 %{_datadir}/GConf/gsettings/scarecrow-settings-daemon.convert
 
-%{_datadir}/glib-2.0/schemas/io.github.scarecrow.settings-daemon.enums.xml
-%{_datadir}/glib-2.0/schemas/io.github.scarecrow.settings-daemon.plugins.gschema.xml
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.enums.xml
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.gschema.xml
 
 %files devel
 %{_includedir}/scarecrow-settings-daemon-3.0
