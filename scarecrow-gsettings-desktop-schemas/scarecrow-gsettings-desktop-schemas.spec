@@ -8,7 +8,7 @@ Summary:        A collection of GSettings schemas
 License:        LGPLv2+
 # no homepage exists for this component
 URL:            https://github.com/scarecrow-de/%{name}
-Source0:        https://github.com/scarecrow-de/%{name}/archive/refs/tags/%{version}.tar.gz
+Source0:        https://github.com/scarecrow-de/%{name}/archive/refs/heads/main.tar.gz
 
 BuildRequires:  gettext
 BuildRequires:  glib2-devel >= 2.31.0
