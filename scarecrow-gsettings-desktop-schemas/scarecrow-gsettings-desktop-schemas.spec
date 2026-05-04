@@ -41,7 +41,7 @@ and header files for developing applications that use %{name}.
 
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n %{name}-main
 
 
 %build
