@@ -155,7 +155,7 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/vater.desktop
 %{_libexecdir}/vater-restart-helper
 %{_datadir}/GConf/gsettings/vater-schemas.convert
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.vater.gschema.xml
-%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.wayland.gschema.xml
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.vater.wayland.gschema.xml
 %{_datadir}/scarecrow-control-center/keybindings/50-vater-*.xml
 %{_mandir}/man1/vater.1*
 %{_udevrulesdir}/61-vater.rules
