@@ -58,7 +58,7 @@ BuildRequires:  python3
 BuildRequires:  libXfixes-devel >= 5.0
 # used in unused BigThemeImage
 BuildRequires:  librsvg2-devel
-BuildRequires:  scarecrow-mutter-devel >= %{mutter_version}
+BuildRequires:  vater-devel >= %{mutter_version}
 BuildRequires:  pulseaudio-libs-devel
 %ifnarch s390 s390x ppc ppc64 ppc64p7
 BuildRequires:  scarecrow-bluetooth-libs-devel >= %{gnome_bluetooth_version}
@@ -81,7 +81,7 @@ Requires:       gtk3%{?_isa} >= %{gtk3_version}
 Requires:       libnma%{?_isa}
 # needed for loading SVG's via gdk-pixbuf
 Requires:       librsvg2%{?_isa}
-Requires:       scarecrow-mutter%{?_isa} >= %{mutter_version}
+Requires:       vater%{?_isa} >= %{mutter_version}
 Requires:       upower%{?_isa}
 Requires:       polkit%{?_isa} >= %{polkit_version}
 Requires:       scarecrow-desktop%{?_isa} >= %{gnome_desktop_version}
