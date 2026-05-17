@@ -301,7 +301,7 @@ fi
 %{_includedir}/scdm/*.h
 %exclude %{_includedir}/scdm/scdm-pam-extensions.h
 %dir %{_datadir}/gir-1.0
-%{_datadir}/gir-1.0/Gdm-1.0.gir
+%{_datadir}/gir-1.0/Scdm-1.0.gir
 %{_libdir}/pkgconfig/scdm.pc
 
 %files pam-extensions-devel
