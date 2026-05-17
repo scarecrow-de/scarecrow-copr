@@ -171,10 +171,10 @@ mkdir -p %{buildroot}%{_datadir}/scarecrow-shell/search-providers
 %{_bindir}/scarecrow-shell-perf-tool
 %{_datadir}/glib-2.0/schemas/*.xml
 %{_datadir}/glib-2.0/schemas/00_io.github.scarecrow_de.shell.gschema.override
-%{_datadir}/applications/io.github.scarecrow_de.Extensions.desktop
-%{_datadir}/applications/io.github.scarecrow_de.desktop
+%{_datadir}/applications/io.github.scarecrow_de.Shell.Extensions.desktop
+%{_datadir}/applications/io.github.scarecrow_de.Shell.desktop
 %{_datadir}/applications/evolution-calendar.desktop
-%{_datadir}/applications/io.github.scarecrow_de.PortalHelper.desktop
+%{_datadir}/applications/io.github.scarecrow_de.Shell.PortalHelper.desktop
 %{_datadir}/bash-completion/completions/scarecrow-extensions
 %{_datadir}/scarecrow-control-center/keybindings/50-scarecrow-shell-system.xml
 %{_datadir}/scarecrow-shell/
