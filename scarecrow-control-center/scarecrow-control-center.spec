@@ -139,7 +139,7 @@ can install configuration files that are picked up by the control-center
 utilities.
 
 %prep
-%autosetup -p1 -S git
+%autosetup -p1 -S git -n %{name}-main
 
 %build
 %meson -Ddocumentation=true

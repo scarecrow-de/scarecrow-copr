@@ -86,7 +86,7 @@ Requires: scarecrow-shell
 Desktop file to add Scarecrow on wayland to display manager session menu.
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n %{name}-main
 
 %build
 %meson                                                          \

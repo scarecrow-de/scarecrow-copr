@@ -128,7 +128,7 @@ The %{name}-tests package contains tests that can be used to verify
 the functionality of the installed %{name} package.
 
 %prep
-%autosetup -S git
+%autosetup -S git -n %{name}-main
 
 %build
 %meson -Degl_device=true -Dwayland_eglstream=true -Dxwayland_initfd=disabled -Dprofiler=false

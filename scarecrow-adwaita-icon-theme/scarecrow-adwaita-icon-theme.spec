@@ -47,7 +47,7 @@ The %{name}-devel package contains the pkgconfig file for
 developing applications that use %{name}.
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n %{name}-main
 
 %build
 %configure

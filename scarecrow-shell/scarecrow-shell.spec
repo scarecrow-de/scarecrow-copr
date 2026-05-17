@@ -138,7 +138,7 @@ innovative user interface concepts to provide a visually attractive and
 easy to use experience.
 
 %prep
-%autosetup -S git
+%autosetup -S git -n %{name}-main
 
 %build
 %meson -Dextensions_app=false
