@@ -78,7 +78,7 @@ A backend implementation for xdg-desktop-portal that is used in Scarecrow.
 
 %files -f %{name}.lang
 %license COPYING
-%doc NEWS README.md
+%doc README.md
 %{_libexecdir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/dbus-1/services/org.freedesktop.impl.portal.desktop.scarecrow.service
