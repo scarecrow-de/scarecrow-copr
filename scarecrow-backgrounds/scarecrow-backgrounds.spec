@@ -30,7 +30,6 @@ which are packaged with the GNOME desktop.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %meson
