@@ -85,7 +85,7 @@ install -m0644 -D %{SOURCE1} $RPM_BUILD_ROOT/usr/lib/udev/rules.d/61-scarecrow-b
 %license COPYING.LIB
 %{_libdir}/libscarecrow-bluetooth.so.*
 %dir %{_libdir}/girepository-1.0
-%{_libdir}/ScarecrowBluetooth-1.0.typelib
+%{_libdir}/girepository-1.0/ScarecrowBluetooth-1.0.typelib
 %{_datadir}/icons/hicolor/*/apps/*
 %{_datadir}/icons/hicolor/*/status/*
 
