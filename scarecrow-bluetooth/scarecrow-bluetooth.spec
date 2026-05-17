@@ -59,7 +59,7 @@ This package contains the libraries and header files that are needed
 for writing applications that require a Bluetooth device selection widget.
 
 %prep
-%autosetup -p1 -n %{name}-main
+%autosetup -p1 -n scarecrow-gnome-bluetooth-main
 
 %build
 %meson -Dgtk_doc=true
