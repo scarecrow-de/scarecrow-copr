@@ -142,6 +142,7 @@ easy to use experience.
 %autosetup -S git -n scarecrow-gnome-shell-main
 tmpdir=$(mktemp -d)
 tar -xf %{SOURCE1} -C "$tmpdir"
+rmdir /builddir/build/BUILD/%{name}-%{version}-build/scarecrow-gnome-shell-main/subprojects/gvc
 mv "$tmpdir"/libgnome-volume-control-master /builddir/build/BUILD/%{name}-%{version}-build/scarecrow-gnome-shell-main/subprojects/gvc
 
 %build
