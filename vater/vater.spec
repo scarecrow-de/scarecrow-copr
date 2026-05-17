@@ -69,7 +69,7 @@ BuildRequires: pkgconfig(libdrm)
 BuildRequires: pkgconfig(gbm)
 BuildRequires: pkgconfig(wayland-server)
 BuildRequires: pkgconfig(wayland-eglstream)
-
+BuildRequires: pkgconfig(wayland-protocols)
 BuildRequires: json-glib-devel >= %{json_glib_version}
 BuildRequires: libgudev1-devel
 BuildRequires: libinput-devel >= %{libinput_version}
