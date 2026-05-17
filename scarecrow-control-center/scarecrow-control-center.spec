@@ -176,7 +176,7 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/scarecrow-control-center
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.ControlCenter.gschema.xml
 %{_datadir}/scarecrow-control-center/keybindings/*.xml
 %{_datadir}/scarecrow-control-center/pixmaps
-%{_datadir}/scarecrow-shell/search-providers/scarecrow-control-center-search-provider.ini
+%{_datadir}/gnome-shell/search-providers/scarecrow-control-center-search-provider.ini
 %{_datadir}/icons/hicolor/*/*/*
 %{_datadir}/man/man1/scarecrow-control-center.1*
 %{_datadir}/metainfo/scarecrow-control-center.appdata.xml
@@ -184,7 +184,7 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/scarecrow-control-center
 %{_datadir}/pkgconfig/gnome-keybindings.pc
 %{_datadir}/polkit-1/actions/io.github.scarecrow_de.controlcenter.*.policy
 %{_datadir}/polkit-1/rules.d/scarecrow-control-center.rules
-%{_datadir}/sounds/scarecrow/default/*/*.ogg
+%{_datadir}/sounds/gnome/default/*/*.ogg
 %{_libexecdir}/cc-remote-login-helper
 %{_libexecdir}/scarecrow-control-center-search-provider
 %{_libexecdir}/scarecrow-control-center-print-renderer
