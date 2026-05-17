@@ -93,7 +93,7 @@ developing applications that use %{name}.
 %autosetup -p1 -n %{name}-main
 tmpdir=$(mktemp -d)
 tar -xf %{SOURCE2} -C "$tmpdir"
-mv "$tmpdir" subprojects/gvc
+mv "$tmpdir" /builddir/build/BUILD/%{name}-%{version}-build/%{name}-main/subprojects/gvc
 
 %build
 %meson

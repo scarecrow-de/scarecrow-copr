@@ -143,7 +143,7 @@ utilities.
 %autosetup -p1 -S git -n %{name}-main
 tmpdir=$(mktemp -d)
 tar -xf %{SOURCE1} -C "$tmpdir"
-mv "$tmpdir" subprojects/gvc
+mv "$tmpdir" /builddir/build/BUILD/%{name}-%{version}-build/%{name}-main/subprojects/gvc
 
 %build
 %meson -Ddocumentation=true
