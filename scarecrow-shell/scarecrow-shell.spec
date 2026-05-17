@@ -213,7 +213,7 @@ mkdir -p %{buildroot}%{_datadir}/scarecrow-shell/search-providers
 %dir %{_datadir}/GConf
 %dir %{_datadir}/GConf/gsettings
 %{_datadir}/GConf/gsettings/scarecrow-shell-overrides.convert
-%{_mandir}/man1/gnome-extensions.1*
+%{_mandir}/man1/scarecrow-extensions.1*
 %{_mandir}/man1/scarecrow-shell.1*
 
 %changelog
