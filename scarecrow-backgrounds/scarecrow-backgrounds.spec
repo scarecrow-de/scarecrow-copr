@@ -46,11 +46,11 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/locale
 %files
 %license COPYING
 %doc AUTHORS NEWS README.md
-%{_datadir}/gnome-background-properties/adwaita.xml
+%{_datadir}/gnome-background-properties/scarecrow-adwaita.xml
 %{_datadir}/backgrounds/scarecrow/adwaita-day.jpg
 %{_datadir}/backgrounds/scarecrow/adwaita-morning.jpg
 %{_datadir}/backgrounds/scarecrow/adwaita-night.jpg
-%{_datadir}/backgrounds/scarecrow/adwaita-timed.xml
+%{_datadir}/backgrounds/scarecrow/scarecrow-adwaita-timed.xml
 
 %files extras
 %license COPYING
@@ -71,6 +71,9 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/locale
 %{_datadir}/backgrounds/scarecrow/Wood.jpg
 
 %changelog
+* Sun May 17 2026 Marcel Mrówka <micro.mail88@gmail.com> - 3.39.0-1
+- Update to 3.39.0. Initial scarecrow-backgrounds release
+
 * Mon Sep 14 2020 Kalev Lember <klember@redhat.com> - 3.38.0-1
 - Update to 3.38.0
 
