@@ -278,7 +278,7 @@ fi
 %{_datadir}/scdm/locale.alias
 %{_datadir}/scdm/gdb-cmd
 %{_datadir}/scarecrow-session/sessions/scarecrow-login.session
-%{_libdir}/girepository-1.0/Gdm-1.0.typelib
+%{_libdir}/girepository-1.0/Scdm-1.0.typelib
 %{_libdir}/security/pam_scdm.so
 %{_libdir}/libscdm*.so*
 %dir %{_localstatedir}/log/scdm
@@ -288,7 +288,7 @@ fi
 %attr(0600, scdm, scdm) %{_localstatedir}/lib/scdm/.config/pulse/default.pa
 %attr(0711, root, scdm) %dir /run/scdm
 %config %{_sysconfdir}/pam.d/scdm-pin
-%config %{_sysconfdir}/pam.d/scdm-smartcard
+#percent-config percent-bracket-_sysconfdir-bracket/pam.d/scdm-smartcard
 %config %{_sysconfdir}/pam.d/scdm-fingerprint
 %{_sysconfdir}/pam.d/scdm-launch-environment
 %{_udevrulesdir}/61-scdm.rules
