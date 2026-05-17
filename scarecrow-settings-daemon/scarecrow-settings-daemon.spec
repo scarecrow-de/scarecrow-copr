@@ -94,7 +94,6 @@ developing applications that use %{name}.
 tmpdir=$(mktemp -d)
 tar -xf %{SOURCE2} -C "$tmpdir"
 mv "$tmpdir" subprojects/gvc
-rmdir "$tmpdir"
 
 %build
 %meson

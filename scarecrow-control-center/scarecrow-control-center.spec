@@ -144,7 +144,6 @@ utilities.
 tmpdir=$(mktemp -d)
 tar -xf %{SOURCE1} -C "$tmpdir"
 mv "$tmpdir" subprojects/gvc
-rmdir "$tmpdir"
 
 %build
 %meson -Ddocumentation=true
