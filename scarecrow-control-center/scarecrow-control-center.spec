@@ -17,6 +17,7 @@ Summary:        Utilities to configure the Scarecrow desktop
 License:        GPLv2+ and CC-BY-SA
 URL:            https://github.com/scarecrow-de/scarecrow-control-center
 Source0:        https://github.com/scarecrow-de/scarecrow-control-center/archive/refs/heads/main.tar.gz
+Source1:        https://gitlab.gnome.org/GNOME/libgnome-volume-control/-/archive/master/libgnome-volume-control-master.tar.gz
 
 BuildRequires:  chrpath
 BuildRequires:  cups-devel
@@ -140,6 +141,10 @@ utilities.
 
 %prep
 %autosetup -p1 -S git -n %{name}-main
+tmpdir=$(mktemp -d)
+tar -xf %{SOURCE1} -C "$tmpdir"
+mv "$tmpdir" subprojects/gvc
+rmdir "$tmpdir"
 
 %build
 %meson -Ddocumentation=true

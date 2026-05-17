@@ -6,6 +6,7 @@ License:        GPLv2+
 URL:            https://github.com/scarecrow-de/scarecrow-gnome-shell/
 #VCS:           git:git://git.gnome.org/gnome-shell
 Source0:        https://github.com/scarecrow-de/scarecrow-gnome-shell/archive/refs/heads/main.tar.gz
+Source1:        https://gitlab.gnome.org/GNOME/libgnome-volume-control/-/archive/master/libgnome-volume-control-master.tar.gz
 
 %define eds_version 3.33.1
 %define gnome_desktop_version 3.35.91
@@ -139,6 +140,10 @@ easy to use experience.
 
 %prep
 %autosetup -S git -n scarecrow-gnome-shell-main
+tmpdir=$(mktemp -d)
+tar -xf %{SOURCE1} -C "$tmpdir"
+mv "$tmpdir" subprojects/gvc
+rmdir "$tmpdir"
 
 %build
 %meson -Dextensions_app=false

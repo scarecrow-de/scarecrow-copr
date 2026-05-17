@@ -16,6 +16,7 @@ License:        GPLv2+
 URL:            https://github.com/scarecrow-de/%{name}
 Source0:        https://github.com/scarecrow-de/scarecrow-settings-daemon/archive/refs/heads/main.tar.gz
 Source1:        io.github.scarecrow_de.settings-daemon.plugins.power.gschema.override
+Source2:        https://gitlab.gnome.org/GNOME/libgnome-volume-control/-/archive/master/libgnome-volume-control-master.tar.gz
 
 BuildRequires:  meson >= 0.44.0
 BuildRequires:  cmake
@@ -90,6 +91,10 @@ developing applications that use %{name}.
 
 %prep
 %autosetup -p1 -n %{name}-main
+tmpdir=$(mktemp -d)
+tar -xf %{SOURCE2} -C "$tmpdir"
+mv "$tmpdir" subprojects/gvc
+rmdir "$tmpdir"
 
 %build
 %meson
