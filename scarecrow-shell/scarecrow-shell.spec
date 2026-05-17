@@ -53,6 +53,7 @@ BuildRequires:  gtk3-devel >= %{gtk3_version}
 BuildRequires:  gettext >= 0.19.6
 BuildRequires:  libcanberra-devel
 BuildRequires:  python3
+BuildRequires:  pkgconfig(gcr-base-3)
 
 # for barriers
 BuildRequires:  libXfixes-devel >= 5.0
