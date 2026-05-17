@@ -93,7 +93,7 @@ install -m0644 -D %{SOURCE1} $RPM_BUILD_ROOT/usr/lib/udev/rules.d/61-scarecrow-b
 %{_includedir}/scarecrow-bluetooth/
 %{_libdir}/libscarecrow-bluetooth.so
 %{_libdir}/pkgconfig/scarecrow-bluetooth-1.0.pc
-%{_datadir}/ScarecrowBluetooth-1.0.gir
+%{_datadir}/gir-1.0/ScarecrowBluetooth-1.0.gir
 %{_datadir}/gtk-doc
 
 %changelog
