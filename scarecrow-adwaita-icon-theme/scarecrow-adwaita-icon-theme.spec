@@ -2,13 +2,13 @@
 %global bootstrap 0
 
 Name:           scarecrow-adwaita-icon-theme
-Version:        3.38.0.1
-Release:        2%{?dist}
+Version:        3.39.0
+Release:        1%{?dist}
 Summary:        Adwaita-Scarecrow icon theme
 
 License:        LGPLv3+ or CC-BY-SA
 URL:            http://www.gnome.org
-Source0:        https://github.com/scarecrow-de/scarecrow-adwaita-icon-theme/archive/refs/tags/%{version}.tar.gz
+Source0:        https://github.com/scarecrow-de/scarecrow-adwaita-icon-theme/archive/refs/heads/main.tar.gz
 
 BuildArch:      noarch
 

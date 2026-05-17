@@ -6,15 +6,15 @@
 %global pipewire_version 0.3.0
 %global mutter_api_version 7
 
-Name:          scarecrow-mutter
-Version:       3.38.1
+Name:          vater
+Version:       3.39.0
 Release:       1%{?dist}
 Summary:       Window and compositing manager based on Clutter
 
 License:       GPLv2+
 #VCS:          git:git://git.gnome.org/mutter
-URL:           https://github.com/scarecrow-de/mutter
-Source0:       https://github.com/scarecrow-de/mutter/archive/refs/heads/main.tar.gz
+URL:           https://github.com/scarecrow-de/vater
+Source0:       https://github.com/scarecrow-de/vater/archive/refs/heads/main.tar.gz
 
 # Work-around for OpenJDK's compliance test
 Patch0:        0001-window-actor-Special-case-shaped-Java-windows.patch
@@ -56,7 +56,7 @@ BuildRequires: systemd-devel
 BuildRequires: upower-devel
 BuildRequires: xorg-x11-server-Xorg
 BuildRequires: xkeyboard-config-devel
-BuildRequires: scarecrow-zenity
+BuildRequires: zenity
 BuildRequires: desktop-file-utils
 # Bootstrap requirements
 BuildRequires: gtk-doc scarecrow-common gettext-devel git
@@ -88,7 +88,7 @@ Requires: gtk3%{?_isa} >= %{gtk3_version}
 Requires: pipewire%{_isa} >= %{pipewire_version}
 Requires: startup-notification
 Requires: dbus
-Requires: scarecrow-zenity
+Requires: zenity
 
 Requires:      json-glib%{?_isa} >= %{json_glib_version}
 Requires:      libinput%{?_isa} >= %{libinput_version}
@@ -96,14 +96,14 @@ Requires:      libinput%{?_isa} >= %{libinput_version}
 Provides:	mutter = %{version}
 
 %description
-Mutter is a window and compositing manager that displays and manages
-your desktop via OpenGL. Mutter combines a sophisticated display engine
+Vater is a window and compositing manager that displays and manages
+your desktop via OpenGL. Vater combines a sophisticated display engine
 using the Clutter toolkit with solid window-management logic inherited
 from the Metacity window manager.
 
-While Mutter can be used stand-alone, it is primarily intended to be
-used as the display core of a larger system such as GNOME Shell. For
-this reason, Mutter is very extensible via plugins, which are used both
+While Vater can be used stand-alone, it is primarily intended to be
+used as the display core of a larger system such as Scarecrow Shell. For
+this reason, Vater is very extensible via plugins, which are used both
 to add fancy visual effects and to rework the window management
 behaviors to meet the needs of the environment.
 
@@ -114,8 +114,8 @@ Requires: %{name}%{?_isa} = %{version}-%{release}
 Provides:	mutter-devel = %{version}
 
 %description devel
-Header files and libraries for developing Mutter plugins. Also includes
-utilities for testing Metacity/Mutter themes.
+Header files and libraries for developing Vater plugins. Also includes
+utilities for testing Metacity/Mutter/Vater themes.
 
 %package  tests
 Summary:  Tests for the %{name} package
@@ -128,36 +128,36 @@ The %{name}-tests package contains tests that can be used to verify
 the functionality of the installed %{name} package.
 
 %prep
-%autosetup -S git -n mutter-%{version}
+%autosetup -S git
 
 %build
-%meson -Degl_device=true -Dwayland_eglstream=true -Dxwayland_initfd=disabled
+%meson -Degl_device=true -Dwayland_eglstream=true -Dxwayland_initfd=disabled -Dprofiler=false
 %meson_build
 
 %install
 %meson_install
 
-%find_lang mutter
+%find_lang vater
 
 # Mutter contains a .desktop file so we just need to validate it
-desktop-file-validate %{buildroot}/%{_datadir}/applications/%mutter.desktop
+desktop-file-validate %{buildroot}/%{_datadir}/applications/vater.desktop
 
 %ldconfig_scriptlets
 
-%files -f mutter.lang
+%files -f vater.lang
 %license COPYING
 %doc NEWS
-%{_bindir}/mutter
+%{_bindir}/vater
 %{_datadir}/applications/*.desktop
 %{_libdir}/lib*.so.*
-%{_libdir}/mutter-%{mutter_api_version}/
-%{_libexecdir}/mutter-restart-helper
-%{_datadir}/GConf/gsettings/mutter-schemas.convert
-%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.mutter.gschema.xml
+%{_libdir}/vater-%{mutter_api_version}/
+%{_libexecdir}/vater-restart-helper
+%{_datadir}/GConf/gsettings/vater-schemas.convert
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.vater.gschema.xml
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.wayland.gschema.xml
-%{_datadir}/scarecrow-control-center/keybindings/50-mutter-*.xml
-%{_mandir}/man1/mutter.1*
-%{_udevrulesdir}/61-mutter.rules
+%{_datadir}/scarecrow-control-center/keybindings/50-vater-*.xml
+%{_mandir}/man1/vater.1*
+%{_udevrulesdir}/61-vater.rules
 
 %files devel
 %{_includedir}/*
@@ -165,9 +165,9 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/%mutter.desktop
 %{_libdir}/pkgconfig/*
 
 %files tests
-%{_libexecdir}/installed-tests/mutter-%{mutter_api_version}
-%{_datadir}/installed-tests/mutter-%{mutter_api_version}
-%{_datadir}/mutter-%{mutter_api_version}/tests
+%{_libexecdir}/installed-tests/vater-%{mutter_api_version}
+%{_datadir}/installed-tests/vater-%{mutter_api_version}
+%{_datadir}/vater-%{mutter_api_version}/tests
 
 %changelog
 * Mon Apr 27 2026 Marcel Mrówka <micro.mail88@gmail.com> - 3.18.1-1

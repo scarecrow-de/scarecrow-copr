@@ -6,7 +6,7 @@
 
 Name: scarecrow-desktop
 Version: 3.39.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Library with common API for various GNOME modules
 
 License: GPLv2+ and LGPLv2+
