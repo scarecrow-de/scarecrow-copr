@@ -115,44 +115,44 @@ mkdir $RPM_BUILD_ROOT%{_libdir}/scarecrow-settings-daemon-3.0/gtk-modules
 
 # list daemons explicitly, so we notice if one goes missing
 # some of these don't have a separate gschema
-%{_libexecdir}/gsd-datetime
+%{_libexecdir}/scsd-datetime
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Datetime.desktop
 
-%{_libexecdir}/gsd-housekeeping
+%{_libexecdir}/scsd-housekeeping
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Housekeeping.desktop
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.housekeeping.gschema.xml
 
-%{_libexecdir}/gsd-keyboard
+%{_libexecdir}/scsd-keyboard
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Keyboard.desktop
 
-%{_libexecdir}/gsd-media-keys
+%{_libexecdir}/scsd-media-keys
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.MediaKeys.desktop
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.media-keys.gschema.xml
 
-%{_libexecdir}/gsd-backlight-helper
+%{_libexecdir}/scsd-backlight-helper
 %{_datadir}/polkit-1/actions/io.github.scarecrow_de.settings-daemon.plugins.power.policy
-%{_libexecdir}/gsd-power
+%{_libexecdir}/scsd-power
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Power.desktop
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.power.gschema.xml
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.power.gschema.override
 
-%{_libexecdir}/gsd-print-notifications
+%{_libexecdir}/scsd-print-notifications
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.PrintNotifications.desktop
-%{_libexecdir}/gsd-printer
+%{_libexecdir}/scsd-printer
 
-%{_libexecdir}/gsd-rfkill
+%{_libexecdir}/scsd-rfkill
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Rfkill.desktop
 
-%{_libexecdir}/gsd-screensaver-proxy
+%{_libexecdir}/scsd-screensaver-proxy
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.ScreensaverProxy.desktop
 
-%{_libexecdir}/gsd-smartcard
+%{_libexecdir}/scsd-smartcard
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Smartcard.desktop
 
-%{_libexecdir}/gsd-sound
+%{_libexecdir}/scsd-sound
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Sound.desktop
 
-%{_libexecdir}/gsd-usb-protection
+%{_libexecdir}/scsd-usb-protection
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.UsbProtection.desktop
 
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.peripherals.gschema.xml
@@ -160,31 +160,31 @@ mkdir $RPM_BUILD_ROOT%{_libdir}/scarecrow-settings-daemon-3.0/gtk-modules
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Wacom.desktop
 
 %ifnarch s390 s390x
-%{_libexecdir}/gsd-wacom
-%{_libexecdir}/gsd-wacom-oled-helper
+%{_libexecdir}/scsd-wacom
+%{_libexecdir}/scsd-wacom-oled-helper
 %{_datadir}/polkit-1/actions/io.github.scarecrow_de.settings-daemon.plugins.wacom.policy
 %endif
 
-%{_libexecdir}/gsd-xsettings
+%{_libexecdir}/scsd-xsettings
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.XSettings.desktop
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.xsettings.gschema.xml
 
-%{_libexecdir}/gsd-a11y-settings
+%{_libexecdir}/scsd-a11y-settings
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.A11ySettings.desktop
 
-%{_libexecdir}/gsd-color
+%{_libexecdir}/scsd-color
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Color.desktop
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.color.gschema.xml
 
-%{_libexecdir}/gsd-sharing
+%{_libexecdir}/scsd-sharing
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Sharing.desktop
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.sharing.gschema.xml
 
 %{_sysconfdir}/xdg/autostart/io.github.scarecrow_de.SettingsDaemon.Wwan.desktop
-%{_libexecdir}/gsd-wwan
+%{_libexecdir}/scsd-wwan
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.settings-daemon.plugins.wwan.gschema.xml
 
-%{_libdir}/scarecrow-settings-daemon-3.0/libscarecrow_gsd.so
+%{_libdir}/scarecrow-settings-daemon-3.0/libscarecrow_scsd.so
 
 %{_sysconfdir}/xdg/Xwayland-session.d/00-xrdb
 %{_userunitdir}/*
