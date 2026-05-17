@@ -74,6 +74,7 @@ BuildRequires: json-glib-devel >= %{json_glib_version}
 BuildRequires: libgudev1-devel
 BuildRequires: libinput-devel >= %{libinput_version}
 BuildRequires: xorg-x11-server-Xwayland
+BuildRequires: cvt
 
 Obsoletes: mutter-wayland < 3.13.0
 Obsoletes: mutter-wayland-devel < 3.13.0
