@@ -54,6 +54,7 @@ BuildRequires:  gettext >= 0.19.6
 BuildRequires:  libcanberra-devel
 BuildRequires:  python3
 BuildRequires:  pkgconfig(gcr-base-3)
+BuildRequires:  pkgconfig(cjs-1.0)
 
 # for barriers
 BuildRequires:  libXfixes-devel >= 5.0
