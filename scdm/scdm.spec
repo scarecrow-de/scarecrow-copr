@@ -255,8 +255,8 @@ fi
 %dir %{_sysconfdir}/scdm/PreSession
 %dir %{_sysconfdir}/scdm/PostSession
 %dir %{_sysconfdir}/scdm/PostLogin
-%{_datadir}/glib-2.0/schemas/org.gnome.login-screen.gschema.xml
-%{_datadir}/glib-2.0/schemas/org.gnome.login-screen.gschema.override
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.login-screen.gschema.xml
+%{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.login-screen.gschema.override
 %{_libexecdir}/scdm-disable-wayland
 %{_libexecdir}/scdm-host-chooser
 %{_libexecdir}/scdm-session-worker
