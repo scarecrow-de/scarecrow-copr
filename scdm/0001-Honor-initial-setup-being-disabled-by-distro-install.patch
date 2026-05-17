@@ -21,7 +21,7 @@ https://bugzilla.gnome.org/show_bug.cgi?id=777708
 diff --git a/daemon/scdm-display.c b/daemon/scdm-display.c
 index 5e193f2..878be88 100644
 --- a/daemon/scdm-display.c
-+++ b/daemon/gscdm-display.c
++++ b/daemon/scdm-display.c
 @@ -1547,6 +1547,31 @@ kernel_cmdline_initial_setup_force_state (gboolean *force_state)
          return TRUE;
  }
