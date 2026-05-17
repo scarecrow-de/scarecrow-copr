@@ -55,6 +55,7 @@ BuildRequires:  libcanberra-devel
 BuildRequires:  python3
 BuildRequires:  pkgconfig(gcr-base-3)
 BuildRequires:  pkgconfig(cjs-1.0)
+BuildRequires:  pkgconfig(bash-completion)
 
 # for barriers
 BuildRequires:  libXfixes-devel >= 5.0
