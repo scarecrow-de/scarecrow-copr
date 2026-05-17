@@ -73,7 +73,6 @@ BuildRequires:  pkgconfig(libwacom)
 Requires: cheese-libs%{?_isa} >= %{cheese_version}
 Requires: glib2%{?_isa} >= %{glib2_version}
 Requires: scarecrow-desktop%{?_isa} >= %{gnome_desktop_version}
-#Requires: gnome-online-accounts%{?_isa} >= %{gnome_online_accounts_version}
 Requires: scarecrow-settings-daemon%{?_isa} >= %{gsd_version}
 Requires: scarecrow-gsettings-desktop-schemas%{?_isa} >= %{gsettings_desktop_schemas_version}
 Requires: gtk3%{?_isa} >= %{gtk3_version}
