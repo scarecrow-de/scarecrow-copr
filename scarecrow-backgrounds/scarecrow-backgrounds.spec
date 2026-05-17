@@ -29,7 +29,7 @@ This package contains the additional desktop backgrounds
 which are packaged with the GNOME desktop.
 
 %prep
-%setup -q
+%setup -q -n %{name}-main
 
 %build
 %meson
