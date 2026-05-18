@@ -2,7 +2,7 @@
 ## (rpmautospec version 0.8.3)
 ## RPMAUTOSPEC: autorelease, autochangelog
 %define autorelease(e:s:pb:n) %{?-p:0.}%{lua:
-    release_number = 1;
+    release_number = 2;
     base_release_number = tonumber(rpm.expand("%{?-b*}%{!?-b:1}"));
     print(release_number + base_release_number - 1);
 }%{?-e:.%{-e*}}%{?-s:.%{-s*}}%{!?-n:%{?dist}}
@@ -23,12 +23,12 @@ BuildRequires:  gcc
 BuildRequires:  gettext
 BuildRequires:  meson
 BuildRequires:  pkgconfig(fontconfig)
-BuildRequires:  pkgconfig(gsettings-desktop-schemas)
+BuildRequires:  scarecrow-gsettings-desktop-schemas-devel
 BuildRequires:  pkgconfig(gtk+-unix-print-3.0)
 BuildRequires:  pkgconfig(xdg-desktop-portal) >= %{xdg_desktop_portal_version}
 BuildRequires:  systemd-rpm-macros
 Requires:       dbus
-Requires:       gsettings-desktop-schemas
+Requires:       scarecrow-gsettings-desktop-schemas
 Requires:       xdg-desktop-portal >= %{xdg_desktop_portal_version}
 
 # https://github.com/containers/composefs/pull/229#issuecomment-1838735764
