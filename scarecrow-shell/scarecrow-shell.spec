@@ -1,6 +1,6 @@
 Name:           scarecrow-shell
 Version:        3.39.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Window management and application launching for Scarecrow
 License:        GPLv2+
 URL:            https://github.com/scarecrow-de/scarecrow-gnome-shell/

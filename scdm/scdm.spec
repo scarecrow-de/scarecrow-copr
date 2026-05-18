@@ -9,7 +9,7 @@
 
 Name: scdm
 Epoch: 1
-Version: 3.38.1
+Version: 3.39.0
 Release: 1%{?dist}
 Summary: The Scarecrow Display Manager
 
