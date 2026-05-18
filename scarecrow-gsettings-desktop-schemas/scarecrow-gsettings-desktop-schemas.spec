@@ -2,7 +2,7 @@
 
 Name:           scarecrow-gsettings-desktop-schemas
 Version:        3.39.0
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        A collection of GSettings schemas
 
 License:        LGPLv2+
@@ -66,13 +66,13 @@ glib-compile-schemas --dry-run --strict %{buildroot}%{_datadir}/glib-2.0/schemas
 %{_datadir}/glib-2.0/schemas/*
 %{_datadir}/GConf/gsettings/scarecrow-gsettings-desktop-schemas.convert
 %{_datadir}/GConf/gsettings/scarecrow-wm-schemas.convert
-%{_libdir}/girepository-1.0/GDesktopEnums-3.0.typelib
+%{_libdir}/girepository-1.0/ScDesktopEnums-3.0.typelib
 
 %files devel
 %doc HACKING
 %{_includedir}/*
 %{_datadir}/pkgconfig/*
-%{_datadir}/gir-1.0/GDesktopEnums-3.0.gir
+%{_datadir}/gir-1.0/ScDesktopEnums-3.0.gir
 
 
 %changelog
