@@ -65,11 +65,11 @@ Requires: scarecrow-gsettings-desktop-schemas >= 0.1.7
 Requires: dbus
 
 %description
-gnome-session manages a Scarecrow desktop or SCDM login session. It starts up
+scarecrow-session manages a Scarecrow desktop or SCDM login session. It starts up
 the other core Scarecrow components and handles logout and saving the session.
 
 %package xsession
-Summary: Desktop file for gnome-session
+Summary: Desktop file for scarecrow-session
 Requires: %{name}%{?_isa} = %{version}-%{release}
 Requires: xorg-x11-server-Xorg%{?_isa}
 Requires: scarecrow-shell
@@ -78,7 +78,7 @@ Requires: scarecrow-shell
 Desktop file to add GNOME to display manager session menu.
 
 %package wayland-session
-Summary: Desktop file for wayland based gnome session
+Summary: Desktop file for wayland based scarecrow-session
 Requires: %{name}%{?_isa} = %{version}-%{release}
 Requires: xorg-x11-server-Xwayland%{?_isa}
 Requires: scarecrow-shell
@@ -127,7 +127,7 @@ Desktop file to add Scarecrow on wayland to display manager session menu.
 %{_datadir}/GConf/gsettings/scarecrow-session.convert
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.SessionManager.gschema.xml
 %{_userunitdir}/scarecrow-session*
-%{_userunitdir}/gnome-launched-.scope.d/
+%{_userunitdir}/scarecrow-launched-.scope.d/
 
 %changelog
 * Sun May 17 2026 Marcel Mrówka <micro.mail88@gmail.com> - 3.39.0-1
