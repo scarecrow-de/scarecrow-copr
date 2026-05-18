@@ -298,6 +298,7 @@ fi
 %{_unitdir}/scdm.service
 %dir %{_userunitdir}/scarecrow-session@scarecrow-login.target.d/
 %{_userunitdir}/scarecrow-session@scarecrow-login.target.d/session.conf
+%{_sysusersdir}/%{name}.conf
 
 %files devel
 %dir %{_includedir}/scdm
