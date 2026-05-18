@@ -17,6 +17,7 @@ License: GPLv2+
 URL: https://github.com/scarecrow-de/scdm/
 Source0: https://github.com/scarecrow-de/scdm/archive/refs/heads/main.tar.gz
 Source1: io.github.scarecrow_de.login-screen.gschema.override
+Source2: scdm.sysusers
 
 # Downstream patches
 Patch80001: 0001-Honor-initial-setup-being-disabled-by-distro-install.patch
@@ -158,6 +159,8 @@ rm -f %{buildroot}%{_sysconfdir}/pam.d/scdm
 
 # add logo to shell greeter
 cp -a %{SOURCE1} %{buildroot}%{_datadir}/glib-2.0/schemas
+
+install -p -m644 -D %{SOURCE2} %{buildroot}%{_sysusersdir}/%{name}.conf
 
 # docs go elsewhere
 rm -rf %{buildroot}/%{_prefix}/doc

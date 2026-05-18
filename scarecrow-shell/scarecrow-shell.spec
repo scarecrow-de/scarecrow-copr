@@ -80,6 +80,7 @@ Requires:       scarecrow-session-xsession
 # from the command line
 Requires:       gobject-introspection%{?_isa} >= %{gobject_introspection_version}
 Requires:       gjs%{?_isa} >= %{gjs_version}
+Requires:       cjs%{?_isa} >= %{gjs_version}
 Requires:       gtk3%{?_isa} >= %{gtk3_version}
 Requires:       libnma%{?_isa}
 # needed for loading SVG's via gdk-pixbuf
@@ -100,7 +101,7 @@ Requires:       at-spi2-atk%{?_isa}
 Requires:       ibus%{?_isa} >= %{ibus_version}
 # needed for the user menu
 Requires:       accountsservice-libs%{?_isa}
-Requires:       gdm-libs%{?_isa}
+Requires:       scdm-libs%{?_isa}
 # needed for settings items in menus
 Requires:       control-center
 # needed by some utilities

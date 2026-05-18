@@ -94,8 +94,6 @@ Requires: zenity
 Requires:      json-glib%{?_isa} >= %{json_glib_version}
 Requires:      libinput%{?_isa} >= %{libinput_version}
 
-Provides:	mutter = %{version}
-
 %description
 Vater is a window and compositing manager that displays and manages
 your desktop via OpenGL. Vater combines a sophisticated display engine
@@ -112,7 +110,6 @@ behaviors to meet the needs of the environment.
 Summary: Development package for %{name}
 Requires: %{name}%{?_isa} = %{version}-%{release}
 
-Provides:	mutter-devel = %{version}
 
 %description devel
 Header files and libraries for developing Vater plugins. Also includes
@@ -121,8 +118,6 @@ utilities for testing Metacity/Mutter/Vater themes.
 %package  tests
 Summary:  Tests for the %{name} package
 Requires: %{name}%{?_isa} = %{version}-%{release}
-
-Provides:	mutter-tests = %{version}
 
 %description tests
 The %{name}-tests package contains tests that can be used to verify
