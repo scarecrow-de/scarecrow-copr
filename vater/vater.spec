@@ -8,7 +8,7 @@
 
 Name:          vater
 Version:       3.39.0
-Release:       2%{?dist}
+Release:       3%{?dist}
 Summary:       Window and compositing manager based on Clutter
 
 License:       GPLv2+
