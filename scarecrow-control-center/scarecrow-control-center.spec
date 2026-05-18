@@ -11,7 +11,7 @@
 
 Name:           scarecrow-control-center
 Version:        3.39.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Utilities to configure the Scarecrow desktop
 
 License:        GPLv2+ and CC-BY-SA
