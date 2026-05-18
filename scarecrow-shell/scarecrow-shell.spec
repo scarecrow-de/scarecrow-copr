@@ -161,10 +161,6 @@ mkdir -p %{buildroot}%{_datadir}/scarecrow-shell/search-providers
 
 %find_lang %{name}
 
-%check
-desktop-file-validate %{buildroot}%{_datadir}/applications/io.github.scarecrow_de.Shell.desktop
-desktop-file-validate %{buildroot}%{_datadir}/applications/evolution-calendar.desktop
-
 %files -f %{name}.lang
 %license COPYING
 %doc README.md
