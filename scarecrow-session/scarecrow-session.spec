@@ -43,6 +43,7 @@ BuildRequires: pkgconfig(xext)
 BuildRequires: pkgconfig(xrender)
 BuildRequires: pkgconfig(xtrans)
 BuildRequires: pkgconfig(xtst)
+BuildRequires: pkgconfig(systemd)
 
 # this is so the configure checks find /usr/bin/halt etc.
 BuildRequires: usermode
