@@ -128,6 +128,7 @@ Desktop file to add Scarecrow on wayland to display manager session menu.
 %{_datadir}/glib-2.0/schemas/io.github.scarecrow_de.SessionManager.gschema.xml
 %{_userunitdir}/scarecrow-session*
 %{_userunitdir}/scarecrow-launched-.scope.d/
+%{_sysusersdir}/%{name}.conf
 
 %changelog
 * Sun May 17 2026 Marcel Mrówka <micro.mail88@gmail.com> - 3.39.0-1
